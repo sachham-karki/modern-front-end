@@ -4,6 +4,8 @@ const app = express();
 
 app.use(express.json());
 
+// app.use(express.urlencoded())
+
 //Importing auth.js from routes folder
 const auth = require("./routes/auth");
 

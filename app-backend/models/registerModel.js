@@ -1,5 +1,6 @@
-const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
+
+const bcrypt = require("bcryptjs");
 
 const registerSchema = new mongoose.Schema({
   name: {
@@ -29,38 +30,45 @@ const registerSchema = new mongoose.Schema({
     required: [true, "Please provide password"],
     minlength: 6,
   },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
-// registerSchema.pre("save", async function (next) {
-//   const salt = await bcrypt.genSalt(10);
-//   this.password = await bcrypt.hash(this.password, salt);
-//   next();
-// });
-
-// registerSchema.methods.mailConfigurations = function () {
-//   return {
-//     // It should be a string of sender/server email
-//     from: "Anti_Matters@outlook.com",
-
-//     to: `${this.email}`,
-
-//     // Subject of Email
-//     subject: "Email Verification",
-//     text: "hello from automations",
-//     // This would be the text of email body
-//     text: `Hi! There, You have recently visited
-//        our website and entered your email.
-//        Please follow the given link to verify your email
-//        http://localhost:3000/verify/
-//        Thanks`,
-//   };
-// };
-
-registerSchema.methods.comparePassword = async function (
-  canditatePassword
-) {
+registerSchema.methods.comparePassword = async function (canditatePassword) {
   const isMatch = await bcrypt.compare(canditatePassword, this.password); //Returns true if match or via.
   return isMatch;
+};
+
+/*             For sending mail                      */
+registerSchema.methods.traspoter = function () {
+  return {
+    service: "hotmail", //Domain name.
+    auth: {
+      user: "Anti_Matters@outlook.com", //Your user email.
+      pass: "z2p9EfCfAcHM5aK", //Your password.
+    },
+  };
+};
+
+registerSchema.methods.mailConfigurationsForReset = function (token) {
+  return {
+    // It should be a string of sender/server email
+    from: "Anti_Matters@outlook.com",
+
+    to: `${this.email}`,
+
+    // Subject of Email
+    subject: "Password Reset",
+    text: "hello from automations",
+    // This would be the text of email body
+    text: `Hi! There, You have recently visited
+         our website and entered your email to reset.
+         Please enter the following password to reset the password
+         http://localhost:3000/verify/${token}
+         Thanks`,
+  };
 };
 
 module.exports = mongoose.model("Register", registerSchema);

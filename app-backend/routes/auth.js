@@ -7,6 +7,6 @@ const { getRegister, register, login, verify } = require("../controllers/auth");
 
 router.route("/register").get(getRegister).post(register);
 router.route("/login").post(login);
-router.route("/verify").post(verify);
+router.route("/verify/:id").post(verify);
 
 module.exports = router;

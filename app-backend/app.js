@@ -4,12 +4,25 @@ const app = express();
 
 app.use(express.json());
 
-// app.use(express.urlencoded())
-
 //Importing auth.js from routes folder
 const auth = require("./routes/auth");
 
+//Importing resetPassword.js from routes folder.
+const resetPassword = require("./routes/resetPassword");
+
+//Importing checkDate.js from routes folder.
+const checkDate = require("./routes/checkDate");
+
+//Importing blog.js from routes folder.
+const blog = require("./routes/blogs");
+
 app.use("", auth);
+
+app.use("", resetPassword);
+
+app.use("", checkDate);
+
+app.use("", blog);
 
 require("dotenv").config();
 

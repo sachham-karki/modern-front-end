@@ -4,10 +4,35 @@ const app = express();
 
 app.use(express.json());
 
+//Importing routes.
+
 //Importing auth.js from routes folder
 const auth = require("./routes/auth");
 
+//Importing resetPassword.js from routes folder.
+const resetPassword = require("./routes/resetPassword");
+
+//Importing checkDate.js from routes folder.
+const checkDate = require("./routes/checkDate");
+
+//Importing blog.js from routes folder.
+const blog = require("./routes/blogs");
+
 app.use("", auth);
+
+app.use("", resetPassword);
+
+app.use("", checkDate);
+
+app.use("", blog);
+
+//Importing middlewares.
+
+//Importing not-found.js from middlewares folder.
+const notFound = require("./middlewares/not-found");
+
+//Route does not exist or page not found.
+app.use(notFound);
 
 require("dotenv").config();
 

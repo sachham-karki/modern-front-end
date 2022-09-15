@@ -7,6 +7,12 @@ const bcrypt = require("bcryptjs");
 
 const nodemailer = require("nodemailer");
 
+const {
+  BadRequestError,
+  CustomAPIError,
+  UnauthenticatedError,
+} = require("../errors");
+
 const resetPassword = async (req, res) => {
   try {
     //Destructuring the user inputed value.
@@ -17,9 +23,9 @@ const resetPassword = async (req, res) => {
 
     //Throw error if user does not exist.
     if (!user) {
-      return res.send("Please provide correct email");
+      throw new BadRequestError("Please provide correct email");
     }
-    
+
     //Get transporter function from register model.
     const transporter = nodemailer.createTransport(await user.traspoter());
 
@@ -43,13 +49,13 @@ const resetPassword = async (req, res) => {
     transporter.sendMail(mailConfigurations, function (error, info) {
       //Throw error if unsucessful.
       if (error) {
-        throw new Error("Email not send");
+        throw new CustomAPIError("Email not send");
       }
       //Print if sucessful.
       console.log("Sent: " + info.response);
     });
 
-    res.json(user);
+    res.status(201).json({ sucess: true, data: user });
   } catch (error) {
     console.log(error);
   }
@@ -65,12 +71,14 @@ const newpassword = async (req, res) => {
 
     //Check if password and samePassword field is empty.
     if (!password || !samePassword) {
-      return res.send("Please provide password");
+      throw new UnauthenticatedError("Please provide password");
     }
 
     //Check if both password are same.
     if (password != samePassword) {
-      return res.send("Please provide same password on both fields");
+      throw new UnauthenticatedError(
+        "Please provide same password on both fields"
+      );
     }
 
     //Hash the password using bcrypt package.
@@ -87,7 +95,7 @@ const newpassword = async (req, res) => {
       }
     );
 
-    res.json({ sucess: true, data: user });
+    res.status(201).json({ sucess: true, data: user });
   } catch (error) {
     console.log(error);
   }

@@ -32,13 +32,20 @@ const upload = multer({
 });
 
 //Importing createblog function from controllers folder.
-const { createBlog } = require("../controllers/blogs");
+const {
+  getAllBlog,
+  createBlog,
+  updateBlog,
+  deleteBlog,
+} = require("../controllers/blogs");
 
 //The upload.single middleware is used in every route we define.
 router.use(upload.single("image"));
 
 /* The upload.single middleware could be used before createBlog function
 but not docs were avaiable for it. */
-router.route("/blog").post(createBlog);
+router.route("/blog").get(getAllBlog).post(createBlog);
+
+router.route("/blog/:id").patch(updateBlog).delete(deleteBlog);
 
 module.exports = router;

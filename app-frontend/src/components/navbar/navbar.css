@@ -33,6 +33,14 @@
   align-items: center;
 }
 
+.gpt3__navbar-sign #right-m {
+  margin-right: 2.5em;
+}
+
+.gpt3__navbar-sign #left-m {
+  margin-left: 2.5em;
+}
+
 .gpt3__navbar-links_container p,
 .gpt3__navbar-sign p,
 .gpt3__navbar-menu_container p {
@@ -45,6 +53,13 @@
 
   margin: 0 1rem;
   cursor: pointer;
+}
+
+.gpt3__navbar-sign p {
+  margin: 1em 5em 0 0;
+}
+.gpt3__navbar-sign p:hover {
+  color: rgb(18, 223, 141);
 }
 
 .gpt3__navbar-sign button,

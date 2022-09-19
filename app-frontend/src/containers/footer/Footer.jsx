@@ -1,8 +1,10 @@
 import React from "react";
 import "./footer.css";
-import gpt3logo from "../../assets/finlog.png";
+import { Link } from "react-router-dom";
+import finlog from "../../assets/finlog.png";
 
 const Footer = () => {
+  const date = new Date();
   return (
     <div className="gpt3__footer section__padding">
       <div className="gpt3__footer-heading">
@@ -15,7 +17,9 @@ const Footer = () => {
       </div>
       <div className="gpt3__footer-links">
         <div className="gpt3__footer-links_logo">
-          <img src={gpt3logo} alt="logo" />
+          <Link to="/">
+            <img src={finlog} alt="logo" />
+          </Link>{" "}
           <p>Anti-Matter Footscray, VIC 3011, All Rights Reserved</p>
         </div>
         <div className="gpt3__footer-links_div">
@@ -39,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="gpt3__footer-copyright">
-        <p>"© 2022 Anti-Matter. All rights reserved"</p>
+        <p>"© {date.getFullYear()} Anti-Matter. All rights reserved"</p>
       </div>
     </div>
   );

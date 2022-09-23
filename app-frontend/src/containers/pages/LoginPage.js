@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import finlog from "../../assets/finlog.png";
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 const LoginPage = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
   };
-
+  const logIn = async () => {
+    try {
+      await signInWithEmailAndPassword(getAuth(), email, pass);
+      navigate("/");
+    } catch (e) {
+      setError(e.message);
+    }
+  };
   return (
     <>
       <div className="login-register__bg">
@@ -22,6 +28,7 @@ const LoginPage = (props) => {
         <div className="mainLogin">
           <div className="auth-form-container">
             <h2>Login</h2>
+            {error && <p className="authError-message">{error}</p>}
             <form className="login-form" onSubmit={handleSubmit}>
               <label for="email">Email</label>
               <input
@@ -32,7 +39,6 @@ const LoginPage = (props) => {
                 id="email"
                 name="email"
               />
-
               <label for="password">Password</label>
               <input
                 value={pass}
@@ -42,8 +48,11 @@ const LoginPage = (props) => {
                 id="password"
                 name="password"
               />
-
-              <button className="button-login-register" type="submit">
+              <button
+                className="button-login-register"
+                type="submit"
+                onClick={logIn}
+              >
                 Log In
               </button>
             </form>
@@ -61,5 +70,4 @@ const LoginPage = (props) => {
     </>
   );
 };
-
 export default LoginPage;

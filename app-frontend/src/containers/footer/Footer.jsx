@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.css";
-import { Link } from "react-router-dom";
 import finlog from "../../assets/finlog.png";
 
 const Footer = () => {
@@ -17,9 +16,11 @@ const Footer = () => {
       </div>
       <div className="gpt3__footer-links">
         <div className="gpt3__footer-links_logo">
-          <Link to="/">
+          <a href="#home">
+            {" "}
             <img src={finlog} alt="logo" />
-          </Link>{" "}
+          </a>
+
           <p>Anti-Matter Footscray, VIC 3011, All Rights Reserved</p>
         </div>
         <div className="gpt3__footer-links_div">

@@ -5,6 +5,8 @@ import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import finlog from "../../assets/finlog.png";
 
+import useUser from "../../containers/hooks/useUser";
+
 const Menu = () => (
   <>
     <p>
@@ -30,6 +32,8 @@ const Menu = () => (
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  //Authentication useUser hook
+  const { user, isLoading } = useUser();
 
   return (
     <div className="gpt3__navbar">
@@ -43,15 +47,14 @@ const Navbar = () => {
           <Menu />
         </div>
       </div>
+
       <div className="gpt3__navbar-sign">
         <div id="right-m">
-          <Link to="/login">
-            <p>Login In</p>
-          </Link>
+          <Link to="/login">{user ? null : <p>Log In</p>}</Link>
         </div>
         <div id="left-m">
           <Link to="/register">
-            <button type="button">Sign up</button>
+            {user ? null : <button type="button">Sign up</button>}
           </Link>
         </div>
       </div>
@@ -77,8 +80,11 @@ const Navbar = () => {
               <Menu />
             </div>
             <div className="gpt3__navbar-menu_container-links-sign">
-              <p>Sign in</p>
-              <button type="button">Sign up</button>
+              <Link to="/login">{user ? null : <p>Log in</p>}</Link>
+              <Link to="/register">
+                {" "}
+                {user ? null : <button type="button">Sign up</button>}{" "}
+              </Link>
             </div>
           </div>
         )}

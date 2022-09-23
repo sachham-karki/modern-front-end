@@ -26,6 +26,16 @@
   padding: 1rem 1.5rem;
   height: 100%;
 }
+.gpt3__blog-container_article-content_LikeButton {
+  cursor: pointer;
+  margin-left: 5em;
+  font-size: 1.3rem;
+  display: inline-block;
+}
+.gpt3__blog-container_article-content_LikeText {
+  cursor: context-menu;
+  margin-left: 0.5rem;
+}
 
 .gpt3__blog-container_article-content p {
   font-family: var(--font-family);

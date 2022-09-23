@@ -7,3 +7,5 @@ export { default as WhatGPT3 } from "./whatGPT3/WhatGPT3";
 export { default as LoginPage } from "./pages/LoginPage";
 export { default as HomePage } from "./pages/Homepage";
 export { default as RegisterPage } from "./pages/RegisterPage";
+
+export { default as PageNotFound } from "./pages/PageNotFound";

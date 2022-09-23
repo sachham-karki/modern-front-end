@@ -1,7 +1,8 @@
 .login-register__bg {
   background-image: linear-gradient(15deg, #002a60, #ba53d6 48%, #069fa7);
 }
-.mainLogin {
+.mainLogin,
+.page-not-foundtext__center {
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -95,4 +96,10 @@
   height: 69px;
   margin-top: 2em;
   margin-left: 2em;
+}
+
+.authError-message {
+  color: rgb(220, 24, 24);
+  margin-top: 2em;
+  margin-bottom: 1em;
 }

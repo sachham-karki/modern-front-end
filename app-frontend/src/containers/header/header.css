@@ -57,7 +57,9 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
+.gpt3__header-content__input button:hover {
+  color: rgb(172, 248, 201);
+}
 .gpt3__header-content__input button {
   flex: 0.6;
   width: 100%;

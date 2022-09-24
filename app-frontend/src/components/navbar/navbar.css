@@ -5,6 +5,15 @@
 
   padding: 2rem 6rem;
 }
+a:hover,
+.gpt3__navbar-sign p:hover {
+  color: rgb(18, 223, 141);
+}
+
+.gpt3__navbar-sign button:hover,
+.gpt3__navbar-menu_container button:hover {
+  color: rgb(172, 248, 201);
+}
 
 .gpt3__navbar-links {
   flex: 1;
@@ -53,10 +62,6 @@
 
   margin: 0 1rem;
   cursor: pointer;
-}
-
-.gpt3__navbar-sign p:hover {
-  color: rgb(18, 223, 141);
 }
 
 .gpt3__navbar-sign button,

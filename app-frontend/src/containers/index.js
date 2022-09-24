@@ -9,3 +9,5 @@ export { default as HomePage } from "./pages/Homepage";
 export { default as RegisterPage } from "./pages/RegisterPage";
 
 export { default as PageNotFound } from "./pages/PageNotFound";
+export { default as BlogDisplayPage } from "./pages/BlogDisplayPage";
+export { default as BlogListPage } from "./pages/BlogListPage";

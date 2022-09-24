@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useUser from "../../containers/hooks/useUser";
+import { getAuth, signOut } from "firebase/auth";
 
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import finlog from "../../assets/finlog.png";
-
-import useUser from "../../containers/hooks/useUser";
 
 const Menu = () => (
   <>
@@ -33,7 +33,8 @@ const Menu = () => (
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   //Authentication useUser hook
-  const { user, isLoading } = useUser();
+  const { user } = useUser();
+  const navigate = useNavigate();
 
   return (
     <div className="gpt3__navbar">
@@ -50,7 +51,22 @@ const Navbar = () => {
 
       <div className="gpt3__navbar-sign">
         <div id="right-m">
-          <Link to="/login">{user ? null : <p>Log In</p>}</Link>
+          {user ? (
+            <button
+              type="button"
+              onClick={() => {
+                signOut(getAuth());
+              }}
+            >
+              Log Out
+            </button>
+          ) : (
+            <Link to="/login">
+              {" "}
+              <p>Log In</p>
+            </Link>
+            // onClick={navigate("/login")}
+          )}
         </div>
         <div id="left-m">
           <Link to="/register">
@@ -80,10 +96,21 @@ const Navbar = () => {
               <Menu />
             </div>
             <div className="gpt3__navbar-menu_container-links-sign">
-              <Link to="/login">{user ? null : <p>Log in</p>}</Link>
+              {user ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    signOut(getAuth());
+                  }}
+                >
+                  Log Out
+                </button>
+              ) : (
+                <p onClick={navigate("/login")}>Log In</p>
+              )}
+
               <Link to="/register">
-                {" "}
-                {user ? null : <button type="button">Sign up</button>}{" "}
+                {user ? null : <button type="button">Sign up</button>}
               </Link>
             </div>
           </div>

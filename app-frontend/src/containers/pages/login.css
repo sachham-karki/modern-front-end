@@ -1,8 +1,18 @@
 .login-register__bg {
   background-image: linear-gradient(15deg, #002a60, #ba53d6 48%, #069fa7);
 }
-.mainLogin,
 .page-not-foundtext__center {
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 5em;
+  color: white;
+  line-height: 3em;
+  font-size: 150%;
+}
+.page-not-foundtext__center span {
+  color: red;
+}
+.mainLogin {
   text-align: center;
   display: flex;
   min-height: 100vh;

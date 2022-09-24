@@ -1,7 +1,14 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomePage, LoginPage, RegisterPage, PageNotFound } from "./containers";
+import {
+  HomePage,
+  LoginPage,
+  RegisterPage,
+  PageNotFound,
+  BlogDisplayPage,
+  BlogListPage,
+} from "./containers";
 
 //****************************Authehtication ***************************************** */
 // Import the functions you need from the SDKs you need
@@ -35,8 +42,11 @@ const App = () => {
         <div className="gradient__bg">
           <Routes>
             <Route path="/" element={<HomePage />} exact />
+            <Route path="/library/:libId" element={<BlogDisplayPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/library" element={<BlogListPage />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
           {/* <LoginPage /> */}
         </div>

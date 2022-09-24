@@ -1,26 +1,38 @@
 import React, { useState, useEffect } from "react";
 import "./article.css";
-import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineLike, AiFillLike } from "react-icons/ai";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const Article = ({ imgUrl, date, title }) => {
-  const [likeNum, setLikeNum] = useState({ like: 0 });
+import useUser from "../../containers/hooks/useUser";
+
+const Article = ({ imgUrl, date, title, blogs }) => {
+  const [likeNum, setLikeNum] = useState({ like: 0, canLike: false });
+  const { canLike } = likeNum;
   const articleId = "alish";
+  const { user, isLoading } = useUser();
+
   useEffect(() => {
     const loadLikes = async () => {
-      const response = await axios.get(`/api/articles/${articleId}`);
+      const token = user && (await user.getIdToken());
+      const headers = token ? { authtoken: token } : {};
+      const response = await axios.get(`/api/articles/${articleId}`, {
+        headers,
+      });
       const newlikeNum = response.data.data.like;
       setLikeNum({ like: newlikeNum });
-
-      console.log(
-        `This is ,.#####ddddddddddddddddddddddd..............${response.data.data.like}`
-      );
     };
-    loadLikes();
-  }, []);
+    if (isLoading) {
+      loadLikes();
+    }
+  }, [isLoading, user]);
 
   const addLikes = async () => {
-    const response = await axios.put(`/api/articles/${articleId}/likes`);
+    const token = user && (await user.getIdToken());
+    const headers = token ? { authtoken: token } : {};
+    const response = await axios.put(`/api/articles/${articleId}/likes`, null, {
+      headers,
+    });
     const updatedLikes = response.data.data.like;
     setLikeNum({ like: updatedLikes });
   };
@@ -36,7 +48,11 @@ const Article = ({ imgUrl, date, title }) => {
             {date}{" "}
             <span className="gpt3__blog-container_article-content_LikeButton">
               <span onClick={addLikes}>
-                <AiOutlineLike color="gold" />
+                {canLike ? (
+                  <AiOutlineLike color="gold" />
+                ) : (
+                  <AiFillLike color="gold" />
+                )}
               </span>
 
               <span className="gpt3__blog-container_article-content_LikeText">
@@ -45,9 +61,13 @@ const Article = ({ imgUrl, date, title }) => {
             </span>
           </p>{" "}
           <p> </p>
-          <h3>{title}</h3>
+          <Link to={`/library/${blogs}`}>
+            <h3>{title}</h3>
+          </Link>
         </div>
-        <p>Read Full Article</p>
+        <Link to={`/library/${blogs}`}>
+          <p>Read Full Article</p>
+        </Link>
       </div>
     </div>
   );

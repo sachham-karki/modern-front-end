@@ -12,7 +12,10 @@ const Footer = () => {
         </h1>
       </div>
       <div className="gpt3__footer-btn">
-        <p>Request Early Access</p>
+        <a href="https://forms.gle/BmeRcaNpprxXe9bS8">
+          {" "}
+          <p>Request Early Access</p>
+        </a>
       </div>
       <div className="gpt3__footer-links">
         <div className="gpt3__footer-links_logo">

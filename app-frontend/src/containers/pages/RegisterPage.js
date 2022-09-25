@@ -59,7 +59,7 @@ const RegisterPage = (props) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                placeholder="email@gmail.com"
+                placeholder="Enter Email"
                 id="email"
                 name="email"
               />
@@ -73,12 +73,12 @@ const RegisterPage = (props) => {
                 id="password"
                 name="password"
               />
-              <label for="password">Password</label>
+              <label for="password">Re-Enter Password</label>
               <input
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 type="password"
-                placeholder="Re-enter Password"
+                placeholder="Enter Password"
                 id="Comfirm password"
                 name="Confirm password"
               />

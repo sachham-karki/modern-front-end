@@ -46,6 +46,11 @@
   word-spacing: 2px;
 }
 
+.gpt3__footer-btn:hover {
+  background-color: rgba(128, 128, 128, 1);
+  border-color: grey;
+}
+
 .gpt3__footer-links {
   display: flex;
   justify-content: space-between;

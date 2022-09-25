@@ -35,7 +35,7 @@ const LoginPage = (props) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                placeholder="email@gmail.com"
+                placeholder="email"
                 id="email"
                 name="email"
               />
@@ -44,7 +44,7 @@ const LoginPage = (props) => {
                 value={pass}
                 onChange={(e) => setPass(e.target.value)}
                 type="password"
-                placeholder="********"
+                placeholder=" password ******"
                 id="password"
                 name="password"
               />

@@ -33,7 +33,16 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
-  width: 80%;
+  /* width: 80%; */
+}
+
+.blogDisplay__filtered_library p {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* or 300% */
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1010px) {

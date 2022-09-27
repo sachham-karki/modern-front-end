@@ -8,27 +8,35 @@ const WhatGPT3 = () => {
       <div className="gpt3__whatgpt3-feature">
         <Feature
           title="What  is  Anti-Matter"
-          text="Anti-Matter is among the best software company on Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in Web-app development and  maintanance, AI, and Blockchain.  "
+          text="Anti-Matter is a IT consulting and engineering firm , we offer leading-edge solutions to large corporations and emerging technology companies , located in Melbourne, Australia. We are among the best emerging software company on Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in digital transformation, Web and Mobile App development, and  maintanance, AI, and Blockchain. We also provide office setup, security and cloud services.
+          The Future is Now with Anti-Matter and You Just Need To Realize It. Step into Future Today & Make it Happen with AI and Block Chain."
         />
       </div>
       <div className="gpt3__whatgpt3-heading">
         <h1 className="gradient__text">
-          The possibilities are beyond your imagination
+          Step into Future Today & Make it Happen with AI and Block-Chain
         </h1>
-        <p>Explore The Library</p>
+        <a href="#library">
+          {" "}
+          <p>Explore The Library</p>
+        </a>
       </div>
       <div className="gpt3__whatgpt3-container">
         <Feature
-          title="Web-Apps Development"
-          text="We so opinion friends me message as delight. Whole front do of plate heard oh ought. "
+          title="Power your app with AI"
+          text="AI has rocketed into every field these days, especially for business purposes. The Anti-Matter's technology can improve employee and customer relationships, find patterns in vast amounts of data, perform repetitive tasks, track past purchase history, purchase preferences, credit scores, and more with the help of Machine Learning, Deep Learning and Natural Language Processing . We provide businesses with AI technologies that help them pursue common themes. "
         />
         <Feature
-          title="Powered AI and Web 3.0"
-          text="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
+          title="Step into Web 3.0"
+          text=' Have you considered adopting cutting-edge technology? You have come to the right place if you need a decentralised application or want to turn your "App into Dapp." You can get help from Anti-Matter in solving this problem. Decentralized apps can increase app security while simultaneously boosting data privacy. We are situated in Australia and offer some of the greatest block-chain services there.'
         />
         <Feature
-          title="Upgrade and Maintanance"
-          text="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
+          title="Magic Touch & Digital Marketing"
+          text="Our Magic Touch focuses on transforming your outdated, old fashioned, and low ranking website into a 'highly appealing, top-ranking, secure Web App that generates a lot of leads and increases conversion rate.
+          Today, the internet is being used by billions of people. Our team is ready to connect you and your customer. In order to help individuals achieve more through extraordinary digital experiences, our mission is to push the boundaries of digital marketing.
+
+          Our goal is to impress our clients with the results of their digital efforts and to maximise their Return On Investment.
+          "
         />
       </div>
     </div>

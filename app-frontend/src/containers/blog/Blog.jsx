@@ -47,11 +47,18 @@ const Blog = () => {
 
   const handleClick = () => setClick(!click);
 
+  //creating Date  variable
+
+  let dateObj = new Date();
+  var today = new Date("2021-10-06");
+  var month = today.toLocaleString("default", { month: "short" });
+  let year = dateObj.getUTCFullYear();
+
   return (
     <div className="gpt3__blog section__padding " id="library">
       <div className="gpt3__blog-heading">
         <h1 className="gradient__text">
-          A lot is happening, We are blogging about it.{" "}
+          A lot is happening, Travel with us into the Future.{" "}
           <span className="blog__heading_like" onClick={addLikes}>
             <span className="blog__heading_like_first_ch">
               {click ? (
@@ -80,34 +87,34 @@ const Blog = () => {
         <div className="gpt3__blog-container_groupA">
           <Article
             imgUrl={blog01}
-            date="Sep 09, 2022"
-            title="Anti-Matter and Code Automation. Let us explore how it is?"
+            date={month + " " + year}
+            title="Anti-Matter's Web and Mobile App Development service. Let us explore."
             blogs={blog1.name}
           />
         </div>
         <div className="gpt3__blog-container_groupB">
           <Article
             imgUrl={blog02}
-            date="Sep 09, 2022"
+            date={month + " " + year}
             title="Anti-Matter and AI is the future. Let us explore how it is?"
             blogs={blog2.name}
           />{" "}
           <Article
             imgUrl={blog03}
-            date="Sep 09, 2022"
-            title="Anti-Matter suggesting  AI. Let us explore how it is?"
+            date={month + " " + year}
+            title="Anti-Matter's IT Solutions."
             blogs={blog3.name}
           />{" "}
           <Article
             imgUrl={blog04}
-            date="Sep 09, 2022"
+            date={month + " " + year}
             title="Anti-Matter and Block-Chain can bring new revolution. Let us explore how it is?"
             blogs={blog4.name}
           />{" "}
           <Article
             imgUrl={blog05}
-            date="Sep 09, 2022"
-            title="Anti-Matter and Open  AI is the future. Let us explore how it is?"
+            date={month + " " + year}
+            title="Anti-Matter's Digital Marketing Services."
             blogs={blog5.name}
           />
         </div>

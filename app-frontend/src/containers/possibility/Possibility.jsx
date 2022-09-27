@@ -4,12 +4,11 @@ import possibilityImage from "../../assets/possibility.png";
 
 const Possibility = () => {
   return (
-    <div className="gpt3__possibility section__padding" id="services">
+    <div className="gpt3__possibility section__padding" id="possibilities">
       <div className="gpt3__possibility-image">
         <img src={possibilityImage} alt="possibility img" />
       </div>
       <div className="gpt3__possibility-content">
-        <h4>Request Early Access to Get Started</h4>
         <h1 className="gradient__text">
           The possibilities are beyond your imagination
         </h1>
@@ -19,7 +18,10 @@ const Possibility = () => {
           counselling solution Web-App development, upgrade and Maintanance,
           cloud services, Logo Design and Digital-Marketing.
         </p>
-        <h4>Request Early Access to Get Started</h4>
+        <a href="https://forms.gle/BmeRcaNpprxXe9bS8">
+          {" "}
+          <h4>Request Early Service to Get Started</h4>
+        </a>
       </div>
     </div>
   );

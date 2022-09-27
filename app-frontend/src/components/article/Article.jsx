@@ -66,7 +66,7 @@ const Article = ({ imgUrl, date, title, blogs }) => {
           </Link>
         </div>
         <Link to={`/library/${blogs}`}>
-          <p>Read Full Article</p>
+          <p>Read Full Article...</p>
         </Link>
       </div>
     </div>

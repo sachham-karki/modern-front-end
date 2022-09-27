@@ -18,14 +18,15 @@ const Menu = () => (
       <a href="#anti-matter">Anti-Matter</a>{" "}
     </p>
     <p>
+      <a href="#case-study">Services</a>
+    </p>
+    <p>
       {" "}
-      <a href="#services">Services</a>
+      <a href="#possibilities">Possibilities</a>
     </p>
+
     <p>
-      <a href="#case-study">Our Services</a>
-    </p>
-    <p>
-      <a href="#library">Library</a>
+      <a href="#library">Into-Future</a>
     </p>
   </>
 );

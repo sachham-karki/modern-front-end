@@ -8,13 +8,13 @@ const Footer = () => {
     <div className="gpt3__footer section__padding">
       <div className="gpt3__footer-heading">
         <h1 className="gradient__text">
-          Do you want your Business to step into the future before others
+          Would you like your company to take the lead in advancing technology?
         </h1>
       </div>
       <div className="gpt3__footer-btn">
         <a href="https://forms.gle/BmeRcaNpprxXe9bS8">
           {" "}
-          <p>Request Early Access</p>
+          <p>Request Early Service</p>
         </a>
       </div>
       <div className="gpt3__footer-links">
@@ -28,10 +28,13 @@ const Footer = () => {
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Links</h4>
-          <p>Overons</p>
+          {/* <p>Overons</p> */}
           <p>Social Media</p>
-          <p>Counters</p>
-          <p>Contact</p>
+          {/* <p>Counters</p> */}
+          <a href="https://forms.gle/BmeRcaNpprxXe9bS8">
+            {" "}
+            <p>Contact</p>
+          </a>
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Company</h4>

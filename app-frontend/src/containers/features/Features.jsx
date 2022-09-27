@@ -4,20 +4,23 @@ import "./features.css";
 
 const featuresData = [
   {
-    title: "Powered your app with AI",
-    text: "Do you want to recomment your e-commers user what product they want. Powered your e-commerce website with Anti-Matter suggesting AI.",
+    title: "Web and Mobile Application Development Services",
+    text: "We offer end-to-end Web and Mobile application development services which include designing, prototyping, coding, programming, developing, testing, cloud hosting, automating, securing, maintaining  and migrating to new architecture. We offer adaptable engagement models to all startups and businesses looking to boost user engagement.",
   },
   {
-    title: "Introduced  Block-chain to your app.",
-    text: "Do your business need decentralized app or want to make you app more secure?  Anti-Matter can help you to solve this problem by introducing Block-Chain to your app. ",
+    title:
+      "Onsite IT Support, Remote Work Solutions and Disaster Recovery services",
+    text: "Providing onsite IT support to Melbourne-area businesses. Neither travel expenses nor callout fees. Ask questions so you may feel like your team is standing right by you.Boost IT has the expertise and tools necessary to recover your erased data. Never fear; just give us a ring.",
+  },
+
+  {
+    title:
+      "Digital Marketing, Office Relocation, Software Installation, security, management, upgrades, cloud storage and Internet Solutions",
+    text: "There won't be much of a disruption to your organisation during the proper installation of your IT systems and software. With cloud security services from Microsoft Security, you can defend your infrastructure, apps, and data from quickly emerging cyberthreats. By setting up, maintaining, upgrading, storing, and managing your hardware, software, networks, and cloud solutions, we can help your business run more smoothly.Do you encounter any internet problems? Whether you require quicker installation or faster speed, we can assist. ",
   },
   {
-    title: "Marketing Services ",
-    text: "Billions of user are engaged in internet today. Anti-Matter provides  digital marketing facilities to scale-up your business. ",
-  },
-  {
-    title: "Magic touch to your current app",
-    text: "Magic touch will give you magic touch to improve your Web-app. ",
+    title: "Artificial Intelligence and Block-Chain Solutions ",
+    text: "Every businesses, medical & education sectors , developer, data scientist, and seasoned practitioner can take benefit of Anti-Matter's comprehensive and in-depth offering of Artificial Intelligence and Block-Chain services.  Anti-Matter is committed assisting clients in accelerating their machine learning and Web 3.0(Decentralized)  journey.",
   },
 ];
 
@@ -26,9 +29,12 @@ const Features = () => {
     <div className="gpt3__features section__padding" id="case-study">
       <div className="gpt3__features-heading">
         <h1 className="gradient__text">
-          Step into Future Today & Make it Happen with AI and Block-Chain{" "}
+          When your competitors are preparing for the future, are you?{" "}
         </h1>
-        <p>Request Early Access to Get Started</p>
+        <a href="https://forms.gle/BmeRcaNpprxXe9bS8">
+          {" "}
+          <p>Request Early Service to Get Started</p>{" "}
+        </a>
       </div>
       <div className="gpt3__features-container">
         {featuresData.map((item, index) => (

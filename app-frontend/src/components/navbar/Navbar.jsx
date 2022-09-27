@@ -22,7 +22,7 @@ const Menu = () => (
       <a href="#services">Services</a>
     </p>
     <p>
-      <a href="#case-study">Case Study</a>
+      <a href="#case-study">Our Services</a>
     </p>
     <p>
       <a href="#library">Library</a>

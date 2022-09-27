@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import blogs from "./blog-content";
 import PageNotFound from "./PageNotFound";
 import "./libraryDisplay.css";
+import LibraryList from "../../components/LibraryList";
 const BlogDisplayPage = () => {
   const { libId } = useParams();
   const blog = blogs.find((blog) => blog.name === libId);
@@ -11,6 +12,10 @@ const BlogDisplayPage = () => {
     return <PageNotFound />;
   }
 
+  const otherLibrary = LibraryList.filter((library) => library.name !== libId);
+  console.log(otherLibrary);
+  const [a, b, c, d] = otherLibrary;
+  console.log(a.name);
   return (
     <div className="libraryDisplay__main">
       <div className="libraryDisplay__textbox">
@@ -21,6 +26,13 @@ const BlogDisplayPage = () => {
             {paragraph}
           </p>
         ))}
+
+        <div className="blogDisplay__filtered_library">
+          {a.content}
+          {b.content}
+          {c.content}
+          {d.content}
+        </div>
       </div>
     </div>
   );

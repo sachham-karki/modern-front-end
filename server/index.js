@@ -1,9 +1,18 @@
 import express from "express";
+//importing __dir
+import { fileURLToPath } from "url";
+import path from "path";
 
-import { connectToDb, Like } from "./db.js";
+//importing dotenv from package
+import "dotenv/config";
+
+import { connectToDb } from "./db/connect.js";
 // import bodyParser from 'body-parser';
 import cors from "cors";
+import { loadUser } from "./middlware/loadUser.js";
 import postRoutes from "./routes/posts.js";
+import displayLikes from "./routes/displayLikes.js";
+import postLikes from "./routes/postLike.js";
 //importing to load crediantial.json
 import fs from "fs";
 import admin from "firebase-admin";
@@ -14,13 +23,22 @@ admin.initializeApp({
 });
 
 const app = express();
-const PORT = process.env.PORT || 4000;
 
 app.use("/posts", postRoutes);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+//use static file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, "./build")));
+
+app.get(/^(?!\/api).+/, (req, res) => {
+  res.sendFile(path.join(__dirname, "./build/index.html"));
+});
 
 //Using middleware to automatically load user info when we receive request
 app.use(async (req, res, next) => {
@@ -39,21 +57,8 @@ app.use(async (req, res, next) => {
   next();
 });
 
-app.get("/api/articles/:name", async (req, res) => {
-  const { name } = req.params;
-  //getting Id of user loaded
-  const { uid } = req.user;
-
-  const article = await Like.findOne({ name });
-
-  if (article) {
-    const likeIds = article.likeIds || [];
-    article.canLike = uid && !likeIds.includes(uid);
-    res.json({ data: article });
-  } else {
-    res.sendStatus(404);
-  }
-});
+//To display like.
+app.use("", displayLikes);
 
 app.use((req, res, next) => {
   if (req.user) {
@@ -63,37 +68,13 @@ app.use((req, res, next) => {
   }
 });
 
-app.put("/api/articles/:name/likes", async (req, res) => {
-  const { name } = req.params;
-  const { uid } = req.user;
+//To post like.
+app.use("", postLikes);
 
-  const article = await Like.findOne({ name });
-
-  if (article) {
-    const likeIds = article.likeIds || [];
-    const canLike = uid && !likeIds.includes(uid);
-    if (canLike) {
-      await Like.updateOne(
-        { name },
-        {
-          $inc: { like: 1 },
-          $push: { upvoteIds: uid },
-        }
-      );
-    }
-
-    const UpdatedArticle = await Like.findOne({ name });
-
-    // if (article) {
-    // UpdatedArticle.like += 1;
-    res.json({ data: UpdatedArticle });
-  } else {
-    res.send("It doesn't exist");
-  }
-});
+const PORT = process.env.PORT || 8000;
 
 connectToDb(() => {
   app.listen(PORT, () => {
-    console.log(`MongoDB listening at port:${PORT}`);
+    console.log(`Server is listening at port:${PORT}`);
   });
 });

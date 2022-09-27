@@ -9,6 +9,17 @@
 
   margin-bottom: 5rem;
 }
+.blog__heading_like {
+  margin-left: 2em;
+  white-space: nowrap;
+}
+.blog__heading_like_first_ch {
+  cursor: pointer;
+}
+
+.blog__heading_like_first_ch:hover {
+  color: white;
+}
 
 .gpt3__blog-heading h1 {
   font-family: var(--font-family);

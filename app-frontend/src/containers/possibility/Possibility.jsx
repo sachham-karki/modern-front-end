@@ -13,10 +13,11 @@ const Possibility = () => {
           The possibilities are beyond your imagination
         </h1>
         <p>
-          We are here to support you and your business, and to scale-up with
-          modern technology. Our services AI, Block-Chain and all kind IT
-          counselling solution Web-App development, upgrade and Maintanance,
-          security, cloud services, Logo Design and Digital-Marketing.
+          Anti-Matters's team are committed to support you and your business,
+          and to scale-up with modern technology. Our services AI, Block-Chain
+          and all kind IT counselling solution Web-App development, upgrade and
+          Maintanance, security, cloud services, Logo Design and
+          Digital-Marketing.
         </p>
         <a href="https://forms.gle/BmeRcaNpprxXe9bS8">
           {" "}

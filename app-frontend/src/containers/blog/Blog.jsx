@@ -96,25 +96,25 @@ const Blog = () => {
           <Article
             imgUrl={blog02}
             date={month + " " + year}
-            title=" AI is the future. Let us explore our AI services?"
+            title=" AI is the future. Let us explore our AI services"
             blogs={blog2.name}
           />{" "}
           <Article
             imgUrl={blog03}
             date={month + " " + year}
-            title="Anti-Matter's IT Solutions."
+            title="Anti-Matters's IT Solutions."
             blogs={blog3.name}
           />{" "}
           <Article
             imgUrl={blog04}
             date={month + " " + year}
-            title=" Block-Chain can bring new revolution. Let us explore our services?"
+            title=" Block-Chain can bring new revolution. Let us explore our services"
             blogs={blog4.name}
           />{" "}
           <Article
             imgUrl={blog05}
             date={month + " " + year}
-            title="Anti-Matter's Digital Marketing Services."
+            title="Anti-Matters's Digital Marketing Services."
             blogs={blog5.name}
           />
         </div>

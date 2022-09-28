@@ -7,9 +7,9 @@ const WhatGPT3 = () => {
     <div className="gpt3__whatgpt3 section__margin" id="anti-matter">
       <div className="gpt3__whatgpt3-feature">
         <Feature
-          title="What  is  Anti-Matter (Australian Technology)"
-          text=" Anti-Matter( Australian Technology) is a IT consulting and Software-Engineering firm , we offer cutting-edge solutions to large corporations and emerging technology companies , located in Melbourne, Australia. We are among the best emerging tech company on Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in digital transformation, Web and Mobile App development, and  maintanance, AI, and Blockchain. We also provide office setup, security and cloud services.
-          The Future is Now with Anti-Matter and You Just Need To Realize It. Step into Future Today & Make it Happen with Anti-Matter(Australian Technology)"
+          title="About Anti-Matters (Australian Technology)"
+          text=" Anti-Matters( Australian Technology) is a IT consulting and Software-Engineering firm , we offer cutting-edge solutions to large corporations and emerging technology companies , located in Melbourne, Australia. Anti-Matters is among the best emerging tech company on Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in digital transformation, Web and Mobile App development, and  maintanance, AI, and Blockchain. We also provide office setup, security and cloud services.
+          The Future is Now with Anti-Matters and You Just Need To Realize It. Step into Future Today & Make it Happen with Anti-Matters(Australian Technology)"
         />
       </div>
       <div className="gpt3__whatgpt3-heading">
@@ -24,11 +24,11 @@ const WhatGPT3 = () => {
       <div className="gpt3__whatgpt3-container">
         <Feature
           title="Power your app with AI"
-          text="AI has rocketed into every field these days, especially for business purposes. The Anti-Matter's technology can improve employee and customer relationships, find patterns in vast amounts of data, perform repetitive tasks, track past purchase history, purchase preferences, credit scores, and more with the help of Machine Learning, Deep Learning and Natural Language Processing . We provide businesses with AI technologies that help them pursue common themes. "
+          text="AI has rocketed into every field these days, especially for business purposes. The Anti-Matters's technology can improve employee and customer relationships, find patterns in vast amounts of data, perform repetitive tasks, track past purchase history, purchase preferences, credit scores, and more with the help of Machine Learning, Deep Learning and Natural Language Processing . We provide businesses with AI technologies that help them pursue common themes. "
         />
         <Feature
           title="Step into Web 3.0"
-          text=' Have you considered adopting cutting-edge technology? You have come to the right place if you need a decentralised application or want to turn your "App into Dapp." You can get help from Anti-Matter in solving this problem. Decentralized apps can increase app security while simultaneously boosting data privacy. We are situated in Australia and offer some of the greatest block-chain services there.'
+          text=' Have you considered adopting cutting-edge technology? You have come to the right place if you need a decentralised application or want to turn your "App into Dapp." You can get help from Anti-Matters in solving this problem. Decentralized apps can increase app security while simultaneously boosting data privacy. We are situated in Australia and offer some of the greatest block-chain services there.'
         />
         <Feature
           title="Magic Touch & Digital Marketing"

@@ -24,7 +24,7 @@ const Footer = () => {
             <img src={finlog} alt="logo" />
           </a>
 
-          <p>Anti-Matter(Australian Technology) Footscray 3011 VIC </p>
+          <p>Anti-Matters(Australian Technology) Footscray 3011 VIC </p>
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Links</h4>
@@ -44,13 +44,13 @@ const Footer = () => {
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Get in touch</h4>
-          <p>Anti-Matter(Australian Technology) Melbourne, VIC, Australia</p>
+          <p>Anti-Matters (Australian Technology) Melbourne, VIC, Australia</p>
           <p>0433878512</p>
-          <p>kms5.antimatter@gmail.com</p>
+          <p>kms5.antimatters@gmail.com</p>
         </div>
       </div>
       <div className="gpt3__footer-copyright">
-        <p>"© {date.getFullYear()} Anti-Matter. All rights reserved"</p>
+        <p>"© {date.getFullYear()} Anti-Matters. All rights reserved"</p>
       </div>
     </div>
   );

@@ -1,0 +1,4 @@
+env_variables:
+  MONGO_PASS: Uh6YRCutVVO4Chyj
+  MONGO_DATA: antimatter-main-db
+  MONGO_USER: sachham-anti-matter

@@ -19,7 +19,7 @@ export const [component1, component2, component3, component4, component5] = [
     <Article
       imgUrl={blog01}
       date={month + " " + year}
-      title="Anti-Matter's Web and Mobile App Development service. Let us explore"
+      title="Web and Mobile App Development services"
       blogs={blog1.name}
     />
   </div>,
@@ -27,7 +27,7 @@ export const [component1, component2, component3, component4, component5] = [
     <Article
       imgUrl={blog02}
       date={month + " " + year}
-      title="Anti-Matter and AI is the future. Let us explore how it is?"
+      title="AI is the future. Let us explore our services"
       blogs={blog2.name}
     />
   </div>,
@@ -35,7 +35,7 @@ export const [component1, component2, component3, component4, component5] = [
     <Article
       imgUrl={blog03}
       date={month + " " + year}
-      title="Anti-Matter's IT Solutions"
+      title="Anti-Matters's IT Solutions"
       blogs={blog3.name}
     />
   </div>,
@@ -43,7 +43,7 @@ export const [component1, component2, component3, component4, component5] = [
     <Article
       imgUrl={blog04}
       date={month + " " + year}
-      title="Anti-Matter and Block-Chain can bring new revolution. Let us explore how it is?"
+      title="Block-Chain can bring new revolution. Let us explore how our services"
       blogs={blog4.name}
     />
   </div>,
@@ -51,7 +51,7 @@ export const [component1, component2, component3, component4, component5] = [
     <Article
       imgUrl={blog05}
       date={month + " " + year}
-      title="Anti-Matter's Digital Marketing Services"
+      title="Anti-Matters's Digital Marketing Services"
       blogs={blog5.name}
     />
   </div>,

@@ -15,7 +15,7 @@ const Menu = () => (
     </p>
     <p>
       {" "}
-      <a href="#anti-matter">Anti-Matter</a>{" "}
+      <a href="#anti-matter">About Us</a>{" "}
     </p>
     <p>
       <a href="#case-study">Into-Future</a>
@@ -27,6 +27,10 @@ const Menu = () => (
 
     <p>
       <a href="#library">Services</a>
+    </p>
+
+    <p>
+      <a href="https://forms.gle/BmeRcaNpprxXe9bS8">Contact Us</a>
     </p>
   </>
 );

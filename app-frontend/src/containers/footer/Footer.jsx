@@ -1,6 +1,8 @@
 import React from "react";
 import "./footer.css";
 import finlog from "../../assets/finlog.png";
+import { FiPhoneCall } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
   const date = new Date();
@@ -24,7 +26,12 @@ const Footer = () => {
             <img src={finlog} alt="logo" />
           </a>
 
-          <p>Anti-Matters(Australian Technology) Footscray 3011 VIC </p>
+          <p>
+            <br />
+            Anti-Matters (Australian Technology) <br />
+            Melbourne VIC 3011 Australia <br />
+            (ABN): 15 196 791 795
+          </p>
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Links</h4>
@@ -45,8 +52,16 @@ const Footer = () => {
         <div className="gpt3__footer-links_div">
           <h4>Get in touch</h4>
           <p>Anti-Matters (Australian Technology) Melbourne, VIC, Australia</p>
-          <p>0433878512</p>
-          <p>kms5.antimatters@gmail.com</p>
+          <p>
+            <FiPhoneCall /> &nbsp; +61 433 878 512
+          </p>
+          <p>
+            <HiOutlineMail /> &nbsp; kms5.antimatters@gmail.com
+          </p>
+          <p>
+            Australian Business Number <br />
+            (ABN): 15 196 791 795
+          </p>
         </div>
       </div>
       <div className="gpt3__footer-copyright">

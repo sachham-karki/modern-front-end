@@ -7,12 +7,13 @@ const Header = () => {
   return (
     <div className="gpt3__header section__padding" id="home">
       <div className="gpt3__header-content">
+        <h2 className="gradient__text">Anti-Matter (Australian Technology)</h2>
         <h1 className="gradient__text">
           Need IT Support to boost your business with cutting edge technology.
         </h1>
         <p>
-          Sign In to kick start in the world of Technology. Anti-matter team are
-          there to support you move closer towards your goal.
+          Sign In to kick start in the world of Technology. Anti-Matter's team
+          are there to support you move closer towards your goal.
         </p>
         <div className="gpt3__header-content__input">
           <input type="email" placeholder="Your Email Address" />

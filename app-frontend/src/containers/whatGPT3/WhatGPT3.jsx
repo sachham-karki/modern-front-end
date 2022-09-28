@@ -7,9 +7,9 @@ const WhatGPT3 = () => {
     <div className="gpt3__whatgpt3 section__margin" id="anti-matter">
       <div className="gpt3__whatgpt3-feature">
         <Feature
-          title="What  is  Anti-Matter"
-          text="Anti-Matter is a IT consulting and engineering firm , we offer leading-edge solutions to large corporations and emerging technology companies , located in Melbourne, Australia. We are among the best emerging software company on Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in digital transformation, Web and Mobile App development, and  maintanance, AI, and Blockchain. We also provide office setup, security and cloud services.
-          The Future is Now with Anti-Matter and You Just Need To Realize It. Step into Future Today & Make it Happen with AI and Block Chain."
+          title="What  is  Anti-Matter (Australian Technology)"
+          text=" Anti-Matter( Australian Technology) is a IT consulting and Software-Engineering firm , we offer cutting-edge solutions to large corporations and emerging technology companies , located in Melbourne, Australia. We are among the best emerging tech company on Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in digital transformation, Web and Mobile App development, and  maintanance, AI, and Blockchain. We also provide office setup, security and cloud services.
+          The Future is Now with Anti-Matter and You Just Need To Realize It. Step into Future Today & Make it Happen with Anti-Matter(Australian Technology)"
         />
       </div>
       <div className="gpt3__whatgpt3-heading">
@@ -32,7 +32,7 @@ const WhatGPT3 = () => {
         />
         <Feature
           title="Magic Touch & Digital Marketing"
-          text="Our Magic Touch focuses on transforming your outdated, old fashioned, and low ranking website into a 'highly appealing, top-ranking, secure Web App that generates a lot of leads and increases conversion rate.
+          text="Our Magic Touch focuses on transforming your outdated, old fashioned, and low ranking website SEO into a 'highly appealing, top-ranking SEO, secure Web App that generates a lot of leads and increases conversion rate.
           Today, the internet is being used by billions of people. Our team is ready to connect you and your customer. In order to help individuals achieve more through extraordinary digital experiences, our mission is to push the boundaries of digital marketing.
 
           Our goal is to impress our clients with the results of their digital efforts and to maximise their Return On Investment.

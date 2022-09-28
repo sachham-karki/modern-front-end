@@ -88,7 +88,7 @@ const Blog = () => {
           <Article
             imgUrl={blog01}
             date={month + " " + year}
-            title="Anti-Matter's Web and Mobile App Development service. Let us explore."
+            title="Web and Mobile App Development Services"
             blogs={blog1.name}
           />
         </div>
@@ -96,7 +96,7 @@ const Blog = () => {
           <Article
             imgUrl={blog02}
             date={month + " " + year}
-            title="Anti-Matter and AI is the future. Let us explore how it is?"
+            title=" AI is the future. Let us explore our AI services?"
             blogs={blog2.name}
           />{" "}
           <Article
@@ -108,7 +108,7 @@ const Blog = () => {
           <Article
             imgUrl={blog04}
             date={month + " " + year}
-            title="Anti-Matter and Block-Chain can bring new revolution. Let us explore how it is?"
+            title=" Block-Chain can bring new revolution. Let us explore our services?"
             blogs={blog4.name}
           />{" "}
           <Article

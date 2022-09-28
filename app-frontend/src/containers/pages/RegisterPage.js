@@ -44,12 +44,12 @@ const RegisterPage = (props) => {
             <h2>Register</h2>
             {error && <p className="authError-message">{error}</p>}
             <form className="register-form" onSubmit={handleSubmit}>
-              <label for="name">Name</label>
+              <label for="name">Full Name</label>
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 type="name"
-                placeholder="name"
+                placeholder="full name.."
                 id="name"
                 name="name"
               />
@@ -59,7 +59,7 @@ const RegisterPage = (props) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                placeholder="Enter Email"
+                placeholder="email.."
                 id="email"
                 name="email"
               />
@@ -69,7 +69,7 @@ const RegisterPage = (props) => {
                 value={pass}
                 onChange={(e) => setPass(e.target.value)}
                 type="password"
-                placeholder="Enter Password"
+                placeholder="password.."
                 id="password"
                 name="password"
               />
@@ -78,7 +78,7 @@ const RegisterPage = (props) => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 type="password"
-                placeholder="Enter Password"
+                placeholder="password.."
                 id="Comfirm password"
                 name="Confirm password"
               />

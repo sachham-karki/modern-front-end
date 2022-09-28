@@ -24,7 +24,7 @@ const Footer = () => {
             <img src={finlog} alt="logo" />
           </a>
 
-          <p>Anti-Matter Footscray, VIC 3011, All Rights Reserved</p>
+          <p>Anti-Matter(Australian Technology) Footscray 3011 VIC </p>
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Links</h4>
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Get in touch</h4>
-          <p>Anti-Matter Footscray, VIC, 3011</p>
+          <p>Anti-Matter(Australian Technology) Melbourne, VIC, Australia</p>
           <p>0433878512</p>
           <p>kms5.antimatter@gmail.com</p>
         </div>

@@ -18,7 +18,7 @@ const Menu = () => (
       <a href="#anti-matter">Anti-Matter</a>{" "}
     </p>
     <p>
-      <a href="#case-study">Services</a>
+      <a href="#case-study">Into-Future</a>
     </p>
     <p>
       {" "}
@@ -26,7 +26,7 @@ const Menu = () => (
     </p>
 
     <p>
-      <a href="#library">Into-Future</a>
+      <a href="#library">Services</a>
     </p>
   </>
 );

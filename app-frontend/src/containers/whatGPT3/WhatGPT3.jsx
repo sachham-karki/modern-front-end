@@ -8,7 +8,7 @@ const WhatGPT3 = () => {
       <div className="gpt3__whatgpt3-feature">
         <Feature
           title="About Anti-Matters (Australian Technology)"
-          text=" Anti-Matters( Australian Technology) is a IT consulting and Software-Engineering firm , we offer cutting-edge solutions to large corporations and emerging technology companies , located in Melbourne, Australia. Anti-Matters is among the best emerging tech company on Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in digital transformation, Web and Mobile App development, and  maintanance, AI, and Blockchain. We also provide office setup, security and cloud services.
+          text=" Anti-Matters( Australian Technology) is a IT consulting and Software-Engineering firm , we offer cutting-edge solutions to large corporations and emerging technology companies , located in Melbourne, Australia. Anti-Matters is among the best emerging tech company in Australia which provides all kind of software/IT solutions for individual or businesses. We are specialized in digital transformation, Web and Mobile App development, and  maintanance, AI, and Blockchain. We also provide office setup, security and cloud services.
           The Future is Now with Anti-Matters and You Just Need To Realize It. Step into Future Today & Make it Happen with Anti-Matters(Australian Technology)"
         />
       </div>
